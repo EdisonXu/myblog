@@ -1,0 +1,20 @@
+<% if (typeof(script) !== 'undefined' && script) { %>
+  <script>
+    var cloudTieConfig = {
+      url: document.location.href,
+      sourceId: "",
+      productKey: "<%= theme.comment.yungentie %>",
+      target: "cloud-tie-wrapper"
+    };
+  </script>
+  <script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+  <script>var yunModuleEnv = true;</script>
+  <script>
+    var yunTieProductKey = "<%= theme.comment.yungentie %>";
+    var yunHotNewsWrap = "hot-news-wrap";   //放置的DOM节点ID 或 样式类
+    Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vZXh0ZW5kL2hvdF9uZXdzX3NjcmlwdC5odG1s", true);
+  </script>
+<% } else { %>
+    <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    <div id="hot-news-wrap"></div>
+<% } %>

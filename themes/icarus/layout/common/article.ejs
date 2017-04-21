@@ -1,0 +1,52 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        <% if (post.banner) { %>
+            <%- partial('post/banner') %>
+        <% } %>
+        <% if (post.link || post.title) { %>
+            <header class="article-header">
+                <%- partial('post/title', { class_name: 'article-title' }) %>
+                <% if (post.layout != 'page') { %>
+                    <div class="article-meta">
+                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                        <%- partial('post/category') %>
+                        <%- partial('post/tag') %>
+                        <% if (!index) { %>
+                          <span id="busuanzi_container_site_pv" style='display:none;float: right'>
+                          <i class="fa fa-eye" aria-hidden="true" style="margin-right:5px;"></i><span id="busuanzi_value_page_pv"></span>人阅读
+                        </span>
+                        <% } %>
+                    </div>
+                <% } %>
+            </header>
+        <% } %>
+        <%- partial('post/gallery') %>
+        <div class="article-entry" itemprop="articleBody">
+        <% if (index && post.excerpt) { %>
+            <p><%- post.excerpt %></p>
+        <% } else { %>
+            <% if (!index && post.toc) { %>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title"><%= __('article.catalogue') %></strong>
+                    <%- toc(post.content) %>
+                </div>
+            <% } %>
+            <%- post.content %>
+            <%- partial('post/copyright') %>
+            <%- partial('post/dashang') %>
+        <% } %>
+        </div>
+        <footer class="article-footer">
+
+            <%- partial('comment/counter', { post: post }) %>
+            <%- partial('share/index', { post: post }) %>
+        </footer>
+    </div>
+    <% if (!index) { %>
+        <%- partial('post/nav') %>
+    <% } %>
+</article>
+
+<% if (!index) { %>
+    <%- partial('comment/index') %>
+<% } %>
