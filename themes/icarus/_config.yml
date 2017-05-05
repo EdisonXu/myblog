@@ -53,8 +53,8 @@ search:
 comment:
     disqus:  # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
-    youyan:  2128296 # enter youyan uid here
-    yungentie: #5b17b705ee04468c8699e7e4e10d97d6
+    youyan:  # 2128296 # enter youyan uid here
+    yungentie: 5b17b705ee04468c8699e7e4e10d97d6
 
 # Share
 share:  bdshare # options: jiathis, bdshare, addtoany, default

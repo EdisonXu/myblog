@@ -3,7 +3,7 @@
         <a href="<%- post.permalink %>#comments" class="article-comment-link disqus-comment-count" data-disqus-url="<%= post.permalink %>"><%= __('article.comments') %></a>
     <% } else if (theme.comment.duoshuo) { %>
         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.path %>"><%= __('article.comments') %></a>
-    <% } else if (theme.comment.youyan) { %>
+    <% } else if (theme.comment.youyan || theme.comment.yungentie) { %>
         <a href="<%- post.permalink %>#comments" class="article-comment-link"><%= __('article.comments') %></a>
     <% } %>
 <% } %>
