@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（五）： Axon使用EventSourcing和AutoConfigure
+title: CQRS和Event Sourcing系列（五）： Axon使用EventSourcing和AutoConfigure
 date: 2017-03-30 17:52:23
 tags:
 - CQRS

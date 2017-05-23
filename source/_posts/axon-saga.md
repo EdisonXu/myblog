@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（七）：Saga的使用
+title: CQRS和Event Sourcing系列（七）：Saga的使用
 date: 2017-03-31 11:37:32
 tags:
 - CQRS

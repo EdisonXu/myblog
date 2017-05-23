@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（二）：基本概念
+title: CQRS和Event Sourcing系列（二）：基本概念
 date: 2017-03-23 12:57:52
 tags:
 - axon

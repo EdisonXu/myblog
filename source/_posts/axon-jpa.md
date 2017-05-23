@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（四）： Axon使用Jpa存储Aggregate状态
+title: CQRS和Event Sourcing系列（四）： Axon使用Jpa存储Aggregate状态
 date: 2017-03-30 15:52:23
 tags:
 - CQRS

@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（三）： Hello,Axon3
+title: CQRS和Event Sourcing系列（三）： Hello,Axon3
 date: 2017-03-30 14:47:46
 tags:
 - CQRS

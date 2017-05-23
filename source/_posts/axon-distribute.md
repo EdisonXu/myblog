@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（八）：DistributeCommand和DistributeEvent
+title: CQRS和Event Sourcing系列（八）：DistributeCommand和DistributeEvent
 date: 2017-04-01 15:01:51
 tags:
 - CQRS

@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（九）：AxonFramework与SpringCloud的整合
+title: CQRS和Event Sourcing系列（九）：AxonFramework与SpringCloud的整合
 date: 2017-04-24 15:01:51
 tags:
 - CQRS

@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（六）： 第一个正式Axon例子
+title: CQRS和Event Sourcing系列（六）： 第一个正式Axon例子
 date: 2017-03-30 19:45:16
 tags:
 - CQRS

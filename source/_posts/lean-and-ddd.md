@@ -1,5 +1,5 @@
 ---
-title: CQRS和Event Souring系列（一）：论精益与领域设计
+title: CQRS和Event Sourcing系列（一）：论精益与领域设计
 date: 2017-03-17 15:00:21
 tags:
 - DDD
