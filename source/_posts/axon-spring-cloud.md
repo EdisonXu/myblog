@@ -200,7 +200,7 @@ eureka:
 ```
 
 ## 业务服务
-在前一篇[CQRS和Event Souring系列（八）：DistributeCommand和DistributeEvent](http://edisonxu.org/2017/04/01/axon-distribute.html) 中提到过，DistributedCommandBus不会直接调用command handler，它只是在不同JVM的commandbus之间建立一个“桥梁”，通过指定`CommandRouter`和`CommandBusConnector`进行Command的分发。`axon-distributed-commandbus-springcloud`包提供了SpringCloud环境下的`CommandRouter`和`CommandBusConnector`。
+在前一篇[CQRS和Event Souring系列（八）：DistributeCommand和DistributeEvent](http://edisonxu.com/2017/04/01/axon-distribute.html) 中提到过，DistributedCommandBus不会直接调用command handler，它只是在不同JVM的commandbus之间建立一个“桥梁”，通过指定`CommandRouter`和`CommandBusConnector`进行Command的分发。`axon-distributed-commandbus-springcloud`包提供了SpringCloud环境下的`CommandRouter`和`CommandBusConnector`。
 **_CommandRouter_**
 `SpringCloudCommandRouter`是该包中`CommandRouter`的具体实现类，其实是调用了我们在SpringBootApplication中`@EnableDiscoveryClient`后注入的EurekaClient。
 每一个Axon的command节点在启动时，会通过DiscoveryClient把本地所有的CommandHandler变向的塞入本地服务在Eureka上的metadata信息中。当DistributedCommandBus发送command时，通过DiscoveryClient从Eureka上获取所有节点信息后，找到metadata中的CommandHandler的信息进行command匹配，分发到匹配的节点去处理command。

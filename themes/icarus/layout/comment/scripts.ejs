@@ -6,4 +6,6 @@
     <%- partial('comment/youyan', { script: true }) %>
 <% } else if (theme.comment.yungentie) { %>
     <%- partial('comment/yungentie', { script: true }) %>
-<% } %>
+<% } else if (theme.comment.changyan) { %>
+    <%- partial('comment/changyan', { script: true }) %>
+<% }%>

@@ -5,5 +5,9 @@
         <a href="<%- post.permalink %>#comments" class="article-comment-link ds-thread-count" data-thread-key="<%= post.path %>"><%= __('article.comments') %></a>
     <% } else if (theme.comment.youyan || theme.comment.yungentie) { %>
         <a href="<%- post.permalink %>#comments" class="article-comment-link"><%= __('article.comments') %></a>
-    <% } %>
+    <% } else if (theme.comment.changyan) { %>
+        <a href="<%- post.permalink %>#comments" class="article-comment-link"><span id = "url::<%- post.permalink %>" class = "cy_cmt_count" style="font-weight: bold;"></span>
+        <script id="cy_cmt_num" src="https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cytsUzqU1">
+        </script></a>
+    <% }%>
 <% } %>

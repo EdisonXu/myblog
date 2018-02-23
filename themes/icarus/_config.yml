@@ -19,7 +19,7 @@ customize:
         author: Edison Xu
         author_title: 懂得前端和移动，设计过架构，做过管理，也搞过自动化和运维，明白各种测试，知晓处理大数据。保持危机感和谦逊，方能更进一步
         location: 中国 - 上海
-        follow: http://edisonxu.org/about
+        follow: http://edisonxu.com/about
     highlight: monokai
     sidebar: right # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
@@ -54,7 +54,8 @@ comment:
     disqus:  # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan:  # 2128296 # enter youyan uid here
-    yungentie: 5b17b705ee04468c8699e7e4e10d97d6
+    yungentie: # 5b17b705ee04468c8699e7e4e10d97d6
+    changyan: cytsUzqU1
 
 # Share
 share:  bdshare # options: jiathis, bdshare, addtoany, default
@@ -76,7 +77,8 @@ miscellaneous:
         google_plus:
     links:
         SpringCloud中文社区: http://bbs.springcloud.cn
+        Spring For All社区 : http://www.spring4all.com
         周立|Spring Cloud: http://itmuch.com
         程序猿DD: http://blog.didispace.com
-        许进|沉思录: http://blog.xujin.org
-        EdisonXu: http://edisonxu.org
+        泥瓦匠BYSocket: https://www.bysocket.com
+        EdisonXu: http://edisonxu.com

@@ -121,6 +121,9 @@ registry=https://registry.npm.taobao.org
     //从JHipster市场下载一些其他集成，上下键翻动，空格选取/反选，回车结束。可以看到市场里还是有不少好东西的，像pages服务、ReactNative集成、swagger2markup让你的swagger界面更漂亮、gRPC自动CRUD代码等。
     ```
 全部选择后，就开始了自动执行生成项目，喝杯水坐等。**如果没有翻墙且忘了添加第二步的同学，请坐等卡住。**
+这里有一点必须提醒，虽然JHipster选项中可以启用ES集成，**但受SpringBoot对ES的集成版本限制**。
+JHipster采用的是1.5.X的SpringBoot版本，对应的spring-data-elasticsearch是2.1.X版本，该版本最高支持ES到2.X，醉了~~~具体参见[这里](https://github.com/spring-projects/spring-data-elasticsearch)
+所以如果要使用高版本的ES，还是得用ES自己提供的REST接口，据ES的一篇文章[Benchmarking REST client and transport client](https://www.elastic.co/blog/benchmarking-rest-client-transport-client)显示，5.0以后的ES自带的REST接口性能还是可以的。
     
 ## 基本姿势
 对于普通Web应用，JHipster在SpringBoot中默认加载了`SpringMVC`、`SpringData`、`SpringJPA`、`SpringSecurity`几个主要的Web相关的家族成员，LogStash作为日志工具，同时引入了`ApacheCommons`包、`Swagger`、`HikariCP`数据库连接池、`Jackson`等工具。基本上开发一个JavaWeb项目所需的框架都具备了，甚至还引入了`Metrics`做运维监控。
