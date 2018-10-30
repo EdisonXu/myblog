@@ -2,9 +2,14 @@
 title: (译)Akka Persistence和Eventuate的对比
 date: 2017-01-22 17:23:53
 tags:
-- eventsourcing
+- event sourcing
 - eventuate
 - akka
+categories: 
+  - Java
+  - 框架
+  - 分布式
+  - Akka
 ---
 > 在实现微服务架构中，遇到了分布式事务的问题。Event-sourcing和CQRS是一个比较适合微服务的解决方案。在学习过程中，遇到了这篇文章，觉得很不错，特地翻译给大家。本文翻译自：[A comparison of Akka Persistence with Eventuate](http://krasserm.github.io/2015/05/25/akka-persistence-eventuate-comparison/)
 

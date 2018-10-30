@@ -1,17 +1,24 @@
 ---
-title: Akka系列：（3）Actor的HelloWorld
+title: Akka入门系列(二)：Actor
 tags:
-- akka
-- actor
-- 并发
+  - akka
+  - actor
+  - 并发
+date: 2018-10-30 09:04:02
+categories: 
+  - Java
+  - 框架
+  - 分布式
+  - Akka
 ---
 
+
 ## Actor模型
-由于`AKka`的核心是`Actor`，而`Actor`是按照`Actor`模型进行实现的，所以在使用`Akka`之前，有必要弄清楚什么是`Actor`模型。
+由于`AKka`的核心是`Actor`，而`Actor`是按照`Actor模型`进行实现的，所以在使用`Akka`之前，有必要弄清楚什么是`Actor模型`。
 `Actor模型`最早是1973年Carl Hewitt、Peter Bishop和Richard Seiger的论文中出现的，受物理学中的广义相对论([general relativity](https://en.wikipedia.org/wiki/General_relativity))和量子力学([quantum mechanics](https://en.wikipedia.org/wiki/Quantum_mechanics))所启发，为解决并发计算的一个数学模型。
 
-`Actor模型`所推崇的哲学是"一切皆是Actor"，这与面向对象编程的"一切皆是对象"类似。
-但不同的是，在模型中，Actor是一个运算实体，它遵循以下规则：
+`Actor模型`所推崇的哲学是"**一切皆是Actor**"，这与面向对象编程的"**一切皆是对象**"类似。
+但不同的是，在模型中，`Actor`是一个运算实体，它遵循以下规则：
 - 接受外部消息，不占用调用方（消息发送者）的CPU时间片
 - 通过消息改变自身的状态
 - 创建有限数量的新`Actor`
@@ -21,7 +28,7 @@ tags:
 
 ## Actor模型的实现
 `Akka`中`Actor`接受外部消息是靠`Mailbox`，参见下图
-![](../images/2018/10/actor-model.png)
+![](/images/2018/10/actor-model.png)
 
 对于`Akka`，它又做了一些约束：
 - 消息是不可变的
@@ -59,7 +66,7 @@ public class EchoActor extends AbstractActor {
 
 }
 ```
-`AbstractActor`要求必须实现createReceive()方法，该方法返回一个Receive定义了该Actor能够处理哪些消息，以及怎么处理。这里只简单的打印一个日志。
+`AbstractActor`要求必须实现`createReceive()`方法，该方法返回一个`Receive`定义了该`Actor`能够处理哪些消息，以及怎么处理。这里只简单的打印一个日志。
 
 ### Actor的启动
 `Akka`中，用`ActorSystem`来管理所有的`Actor`，包括其生命周期及交互。
@@ -83,7 +90,7 @@ ActorRef echoActor = system.actorOf(Props.create(EchoActor.class), "echoActor");
 
 ### Actor的Path
 `Akka`中的`Actor`不能直接被new出来，而是按一棵树来管理的，每个`Actor`都有一个树上的`path`：
-![Akka Actor Hierarchy](../images/2018/10/actor_top_tree.png)
+![Akka Actor Hierarchy](/images/2018/10/actor_top_tree.png)
 
 
 实际上，在我们创建自己的`Actor`之前，`Akka`已经在系统中创建了三个名字中带有`guardian`的`Actor`：
@@ -136,7 +143,7 @@ public Receive createReceive() {
 
 ### Actor的停止
 停止一个`Actor`有三种方法：
-- 调用ActorSystem或getContext()的stop方法
+- 调用`ActorSystem`或`getContext()`的stop方法
 - 给目标发送一个毒药消息：`akka.actor.PoisonPill.getInstance()`
 - 给目标发送一个Kill消息： `akka.actor.Kill.getInstance()`
 
@@ -150,7 +157,7 @@ public Receive createReceive() {
 "kill"的方法略有不同，它会抛出一个`ActorKilledException`到父层去，由父层实现决定如何处理。
 一般来说，不应该依赖于`PoisonPill`和`Kill`去关闭`Actor`。推荐的方法是自定义关闭消息，交由`Actor`处理。
 
-如果需要等待关闭结果，可以采用PatternsCS.gracefulStop：
+如果需要等待关闭结果，可以采用`PatternsCS.gracefulStop`，它会返回一个`CompletionStage`，可以进行到期处理：
 ```java
 import static akka.pattern.PatternsCS.gracefulStop;
 import akka.pattern.AskTimeoutException;
@@ -165,4 +172,4 @@ try {
   // the actor wasn't stopped within 5 seconds
 }
 ```
-发送一个自定义的消息，如Manager.SHUTDOWN，等待关闭，如果6秒未关闭，再去处理。
+发送一个自定义的消息，如`Manager.SHUTDOWN`，等待关闭，如果6秒未关闭，再去处理。

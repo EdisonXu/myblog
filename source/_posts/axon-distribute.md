@@ -1,11 +1,16 @@
 ---
-title: CQRS和Event Sourcing系列（八）：DistributeCommand和DistributeEvent
+title: Axon入门系列(七)：DistributeCommand和DistributeEvent
 date: 2017-04-01 15:01:51
 tags:
 - CQRS
 - axon
 - DDD
-- eventsourcing
+- event sourcing
+categories: 
+  - Java
+  - 框架
+  - CQRS
+  - Axon
 ---
 > 上一篇我们才算真正实现了一个基于Axon3的例子，本篇我们来尝试实现在分布式环境下利用Axon3做CQRS，即把CommandSide和QuerySide变成两个独立应用，分别可以启多份实例。
 

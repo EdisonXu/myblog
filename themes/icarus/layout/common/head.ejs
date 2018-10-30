@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
 <head>
-    <meta http-equiv="refresh" content="0;url=http://edisonxu.com/<%= page.path %>">
+    <!--<meta http-equiv="refresh" content="0;url=http://edisonxu.com/<%= page.path %>">-->
     <meta charset="utf-8">
     <%
         function capitalize (str) { return str.charAt(0).toUpperCase() + str.substring(1).toLowerCase() }
@@ -18,8 +18,14 @@
         } else if (is_tag()) {
             title = capitalize(__('index.tag')) + ': ' + page.tag;
         }
+        var t_tags = '';
+        if(page.tags){
+            page.tags.forEach(function(item, index){
+                t_tags = t_tags + item.name + ' | ';
+            })    
+        }
     %>
-    <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+    <title><% if (title) { %><%= title %> | <% } %><% if (t_tags) { %><%= t_tags %><% } %><%= config.title %> </title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <%- open_graph({
         image:          thumbnail(page),

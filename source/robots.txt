@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://edisonxu.org/sitemap.xml
-Sitemap: http://edisonxu.org/baidusitemap.xml
+Sitemap: http://edisonxu.com/sitemap.xml
+Sitemap: http://edisonxu.com/baidusitemap.xml

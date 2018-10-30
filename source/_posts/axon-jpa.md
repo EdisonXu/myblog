@@ -1,11 +1,16 @@
 ---
-title: CQRS和Event Sourcing系列（四）： Axon使用Jpa存储Aggregate状态
+title: Axon入门系列(三)：Axon使用Jpa存储Aggregate状态
 date: 2017-03-30 15:52:23
 tags:
 - CQRS
 - axon
 - DDD
-- eventsourcing
+- event sourcing
+categories: 
+  - Java
+  - 框架
+  - CQRS
+  - Axon
 ---
 > 上一篇里，介绍了Axon的基本概念，并且做了一个最简单的hello例子。本篇将更进一步，完成两个小目标：
 > 1. 集成SpringBoot；

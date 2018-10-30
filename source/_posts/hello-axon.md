@@ -1,10 +1,15 @@
 ---
-title: CQRS和Event Sourcing系列（三）： Hello,Axon3
+title: Axon入门系列(二)：Hello,Axon3
 date: 2017-03-30 14:47:46
 tags:
 - CQRS
 - axon
 - DDD
+categories: 
+  - Java
+  - 框架
+  - CQRS
+  - Axon
 ---
 > AxonFramework是一个轻量级的CQRS框架，支持EventSourcing，本系列将开始通过例子，StepByStep学习AxonFramework。
 

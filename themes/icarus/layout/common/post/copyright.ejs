@@ -1,5 +1,13 @@
-<div class="article-copyright">
-  <i class="fa fa-lightbulb-o"></i>本文由 <a href="<%- url %>">EdisonXu - 徐焱飞</a> 创作，采用
-  <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 进行许可。
-  可自由转载、引用，但需署名作者且注明文章出处。本位链接为<a href="<%- page.permalink %>" target="_blank" rel="external"><%- page.permalink %></a>
-</div>
+<% if (post.author && post.author != 'Edison Xu') { %>
+    <div class="article-copyright">
+        本文作者：<%- post.author %><br>
+        原文链接：<a href="<%- post.origin %>" target="_blank" rel="external"><%- post.origin %></a>
+    </div>
+<% }else { %>
+    <div class="article-copyright">
+      <i class="fa fa-lightbulb-o"></i>本文由 <a href="<%- url %>">EdisonXu - 徐焱飞</a> 创作，采用
+      <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 进行许可。
+      可自由转载、引用，但需署名作者且注明文章出处。<br>本文链接为<a href="<%- page.permalink %>" target="_blank" rel="external"><%- page.permalink %></a>
+    </div>
+<% } %>
+

@@ -8,10 +8,12 @@
                 <%- partial('post/title', { class_name: 'article-title' }) %>
                 <% if (post.layout != 'page') { %>
                     <div class="article-meta">
+                        <%- partial('post/repost') %>
                         <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                        <%- partial('post/author') %>
                         <%- partial('post/category') %>
-                        <%- partial('post/tag') %>
                         <% if (!index) { %>
+                          <%- partial('post/tag') %>
                           <span id="busuanzi_container_site_pv" style='display:none;float: right'>
                           <i class="fa fa-eye" aria-hidden="true" style="margin-right:5px;"></i><span id="busuanzi_value_page_pv"></span>人阅读
                         </span>
@@ -37,7 +39,7 @@
         <% } %>
         </div>
         <footer class="article-footer">
-
+            <%- partial('post/tag') %>
             <%- partial('comment/counter', { post: post }) %>
             <%- partial('share/index', { post: post }) %>
         </footer>

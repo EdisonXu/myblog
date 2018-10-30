@@ -35,12 +35,12 @@ customize:
 widgets:
     - board
     #- recent_posts
-    - category
-    - hot_articles
-    - recent_comments
-    - archive
-    # - tag
     - tagcloud
+    - category
+    # - hot_articles
+    #- recent_comments
+    # - archive
+    # - tag
     - links
 
 # Search
@@ -54,7 +54,8 @@ comment:
     disqus:  # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan:  # 2128296 # enter youyan uid here
-    yungentie: 5b17b705ee04468c8699e7e4e10d97d6
+    yungentie: #5b17b705ee04468c8699e7e4e10d97d6
+    gitalk: 1
 
 # Share
 share:  bdshare # options: jiathis, bdshare, addtoany, default

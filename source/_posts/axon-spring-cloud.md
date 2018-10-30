@@ -1,11 +1,16 @@
 ---
-title: CQRS和Event Sourcing系列（九）：AxonFramework与SpringCloud的整合
+title: Axon入门系列(八)：AxonFramework与SpringCloud的整合
 date: 2017-04-24 15:01:51
 tags:
 - CQRS
 - axon
 - DDD
-- eventsourcing
+- event sourcing
+categories: 
+  - Java
+  - 框架
+  - CQRS
+  - Axon
 ---
 > 上一篇里，我们在利用Axon3的DistributeCommand的JGroup支持，和DistributedEvent对AMQP的支持，实现了分布式环境下的CQRS和EventSourcing。
 > 在这一篇中，我们将把Axon3与当下比较火热的微服务框架——SpringCloud进行整合，并将其微服务化。

@@ -8,4 +8,6 @@
     <%- partial('comment/yungentie', { script: true }) %>
 <% } else if (theme.comment.changyan) { %>
     <%- partial('comment/changyan', { script: true }) %>
-<% }%>
+<% }else if (theme.comment.gitalk) { %>
+    <%- partial('comment/gitalk', { script: true }) %>
+<% }%>%>

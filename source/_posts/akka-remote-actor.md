@@ -1,14 +1,21 @@
 ---
-title: Akka系列：（3）远程Actor
+title: Akka入门系列(三)：远程Actor
 tags:
-- akka
-- actor
-- 并发
+  - akka
+  - actor
+  - 并发
+date: 2018-10-30 09:04:22
+origin: http://test.com/1.html
+categories: 
+  - Java
+  - 框架
+  - 分布式
+  - Akka
 ---
 
 
->虽然`Akka`在单机上可以运行上百万的`Actor`，但出于容错、负载均衡、灰度发布、提高并行度等等原因，我们仍然需要能在多个不同的服务器上运行`Actor`。所以Akka提供了`akka-remoting`的扩展包，屏蔽底层网络传输的细节，让上层以及其简单的方式使用远程的`Actor`调度。
 
+>虽然`Akka`在单机上可以运行上百万的`Actor`，但出于容错、负载均衡、灰度发布、提高并行度等等原因，我们仍然需要能在多个不同的服务器上运行`Actor`。所以Akka提供了`akka-remoting`的扩展包，屏蔽底层网络传输的细节，让上层以及其简单的方式使用远程的`Actor`调度。 
 >官方文档：https://doc.akka.io/docs/akka/current/remoting.html
 
 ## 适用场景

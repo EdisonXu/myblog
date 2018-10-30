@@ -1,11 +1,16 @@
 ---
-title: CQRS和Event Sourcing系列（五）： Axon使用EventSourcing和AutoConfigure
+title: Axon入门系列(四)：Axon使用EventSourcing和AutoConfigure
 date: 2017-03-30 17:52:23
 tags:
 - CQRS
 - axon
 - DDD
-- eventsourcing
+- event sourcing
+categories: 
+  - Java
+  - 框架
+  - CQRS
+  - Axon
 ---
 > 继上一篇集成SpringBoot后，本篇将继续完成小目标：
 > 1. 使用EventSourcing

@@ -1,11 +1,16 @@
 ---
-title: CQRS和Event Sourcing系列（六）： 第一个正式Axon例子
+title: Axon入门系列(五)：第一个正式Axon例子
 date: 2017-03-30 19:45:16
 tags:
 - CQRS
 - axon
 - DDD
-- eventsourcing
+- event sourcing
+categories: 
+  - Java
+  - 框架
+  - CQRS
+  - Axon
 ---
 > 前面对Axon的基本概念和基本操作做了简介，从本章开始，我们将一步步使用AxonFramework完成一个真正CQRS&EventSourcing的例子。
 

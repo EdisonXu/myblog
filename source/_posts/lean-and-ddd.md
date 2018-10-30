@@ -1,9 +1,11 @@
 ---
-title: CQRS和Event Sourcing系列（一）：论精益与领域设计
+title: 论精益与领域设计
 date: 2017-03-17 15:00:21
 tags:
 - DDD
 - 感悟
+categories: 
+  - 感悟
 ---
 
 ## 开始之前

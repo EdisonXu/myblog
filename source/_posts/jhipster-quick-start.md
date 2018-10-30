@@ -5,6 +5,9 @@ tags:
   - JHipster
   - 微服务
 date: 2018-02-01 16:39:24
+categories: 
+  - Java
+  - 脚手架
 ---
 
 

@@ -1,10 +1,15 @@
 ---
-title: CQRS和Event Sourcing系列（二）：基本概念
+title: Axon入门系列(一)：CQRS基本概念
 date: 2017-03-23 12:57:52
 tags:
 - axon
 - CQRS
-- eventsourcing
+- event sourcing
+categories: 
+  - Java
+  - 框架
+  - CQRS
+  - Axon
 ---
 > 在研究微服务的过程中，跨服务的操作处理，尤其是带有事务性需要统一commit或rollback的，是比较麻烦的。本系列记录了我在研究这一过程中的心得体会。
 > 本篇主要就以下几个问题进行介绍：
